@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cambia Imagen 4</title>
+</head>
+<body>
+	<h2>Click en la imagen para que cambie</h2>
+	<p>Imagen numero: 1</p>
+	<img 
+		src="https://images.ctfassets.net/denf86kkcx7r/4IPlg4Qazd4sFRuCUHIJ1T/f6c71da7eec727babcd554d843a528b8/gatocomuneuropeo-97"
+		alt="gato" id="gato" height="400px" width="auto">
+
+	<script>
+		let estado = 0;
+		let imagen = document.getElementById('gato');
+		imagen.addEventListener('click', cambiaFoto);
+
+		let parrafo = document.querySelector('p');
+
+		function cambiaFoto(){
+			estado = (estado+1) % 4;
+			parrafo.innerHTML = 'Imagen numero: ' + (estado+1) ;
+			
+			switch(estado){
+				case 0:
+					imagen.src = "https://images.ctfassets.net/denf86kkcx7r/4IPlg4Qazd4sFRuCUHIJ1T/f6c71da7eec727babcd554d843a528b8/gatocomuneuropeo-97";
+					break;
+				case 1:
+					imagen.src = "https://static.nationalgeographic.es/files/styles/image_3200/public/nationalgeographic_1468962.webp";
+					break;
+				case 2:
+					imagen.src = "https://www.miau.com.mx/wp-content/uploads/2014/09/gatito.jpg";
+					break;
+				case 3:
+					imagen.src = "https://purina.cl/sites/default/files/2025-04/razas-de-gatos.jpg";
+					break;
+			}			
+		}
+		
+	</script>
+</body>
+</html>

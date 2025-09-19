@@ -1,34 +1,48 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=100%", initial-scale=1.0">
-    <title>Hola Mundo</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=100%", initial-scale=1.0">
+	<title>Hola Mundo</title>
 </head>
 <body>
-    <h1>Hola Mundo</h1>
-    <script>
-        //alert('Saludos desde la clase');
-        console.log('Hola desdde la consola');
-        let i = 0;
-    </script>
+	<h1>Hola Mundo</h1>
 
-    <h2>Esto es un título 2</h2>
+	<h2>Esto es un título 2</h2>
+	<p id="prueba">Parrafo a cambiar.</p>
+	<button onclick = "
+		i++;
+		document.getElementById('prueba').innerHTML = 'Parrafo cambiado ' + i + ' veces!';
+	">Dale!</button>
 
-    <p id="prueba">Parrafo a cambiar.</p>
-    <button onclick = "
-        i++;
-        document.getElementById('prueba').innerHTML = 'Parrafo cambiado ' + i + ' veces!';
-    ">Dale!</button>
+	<button id="button2">Dale! Funcion</button>
 
-    <script>
-        //alert('Esto se muestra después');
-        let h2 = document.querySelector('h2');
-        h2.textContent="Hola otra vez";
-        h2.style.color = "#0000FF";
 
-        
-    </script>
-    
+	<script src="holamundo.js"></script>
+
+<!-- 	<script>
+		//alert('Esto se muestra después');
+		let h2 = document.querySelector('h2');
+		h2.textContent="Hola otra vez";
+		h2.style.color = "#0000FF";   
+		
+		function modificaH2(evento){
+			i++;
+			document.getElementById('prueba').innerHTML = 'Parrafo cambiado ' + i + ' veces!';
+		}
+		// Enlazar el botón con la acción (la función) correspondiente, al clickar se llama a modificarH2
+		// IMPORTANTE NO USAR PARÉNTESIS AQUI
+		// ('click', modificaH2)   -> Al clickar ejecuta "modifica2"
+		// ('click', modificaH2()) -> Al clickar ejecuta LO QUE DEVUELVA "modifica2", osea nada porque no hay return
+		document.getElementById('button2').addEventListener('click', modificaH2);
+
+		// Buscar por nombre de etiqueta
+		//document.getElementsByTagName('button')[0].addEventListener('click', modificaH2);
+
+		// Buscar el PRIMER elemento de ese tipo
+		//document.querySelector('button').addEventListener('click', modificaH2);
+
+
+	</script> -->
 </body>
 </html>
