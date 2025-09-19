@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=100%", initial-scale=1.0">
+    <title>Hola Mundo</title>
+</head>
+<body>
+    <h1>Hola Mundo</h1>
+    <script>
+        //alert('Saludos desde la clase');
+        console.log('Hola desdde la consola');
+        let i = 0;
+    </script>
+
+    <h2>Esto es un título 2</h2>
+
+    <p id="prueba">Parrafo a cambiar.</p>
+    <button onclick = "
+        i++;
+        document.getElementById('prueba').innerHTML = 'Parrafo cambiado ' + i + ' veces!';
+    ">Dale!</button>
+
+    <script>
+        //alert('Esto se muestra después');
+        let h2 = document.querySelector('h2');
+        h2.textContent="Hola otra vez";
+        h2.style.color = "#0000FF";
+
+        
+    </script>
+    
+</body>
+</html>

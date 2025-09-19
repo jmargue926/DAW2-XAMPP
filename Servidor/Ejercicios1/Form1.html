@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulario Registro</title>
+</head>
+<body>
+	<form action="Form1.php" method="post">
+		<h2>Rellena estos datos para registrarte  en nuestra tienda!</h2>
+		<fieldset> 
+			<legend>Datos de Inicio de Sesión</legend>
+			
+			<label for="user">Nombre de usuario: </label> <br>
+			<input type="text" name="user" id="user" /> <br><br>
+			
+			<label for="password">Contraseña: </label> <br>
+			<input type="password" name="password" id="password"  /> <br><br>
+		</fieldset> <br>
+		<fieldset>
+			<legend>Datos de Usuario</legend>
+
+			<label for="fullname">Nombre y apellidos</label> <br>
+			<input type="text" name="fullname" id="fullname" /> <br><br>
+			
+
+			<label for="email">Correo Electronico</label> <br>
+			<input type="email" name="email" id="email"  /><br><br>
+
+			<label for="number">Numero de teléfono</label> <br>
+			<input type="number" name="number"/> <br><br>
+
+			<label for="dir">Dirección</label> <br>
+			<input type="text" name="dir" id="dir" /> <br><br>
+
+			<label for="sex">Sexo:</label> <br>
+			<input type="radio" name="sex" value="h" checked/> Hombre
+			<input type="radio" name="sex" value="m" /> Mujer
+			<br><br>
+
+			<label for="comunidad">Comunidad Autónoma:</label> <br>
+			<select name="comunidad" id="comunidad">
+				<option value="-"  selected>---</option>
+				<option value="andalucia">Andalucia</option>
+				<option value="madrid">Madrid</option>
+				<option value="cat">Cataluña</option>
+				<option value="otra">Otra</option>
+			</select><br><br>
+
+			<label for="idiomas">Idiomas que habla:</label> <br>
+			<select MULTIPLE name="idiomas[]" id="idiomas">
+				<option value="ES" selected>Español</option>
+				<option value="EN" selected>Inglés</option>
+				<option value="RU">Ruso</option>
+				<option value="CN">Chino</option>
+			</select><br><br>
+
+			<label for="otros">Otra info que quiera aportar: </label> <br>
+			<textarea name="otros" cols="50" rows="4"></textarea> <br><br>
+
+			<input name="publi[]" type="checkbox" value="publiMail" checked/> Acepto recibir publicidad por correo electrónico<br>
+			<input name="publi[]" type="checkbox" value="publiPhone" checked/> Acepto recibir publicidad por teléfono<br>
+
+		</fieldset> <br>
+	
+		<div id="botones"> <!-- Botones de colores al final -->
+			<input type="submit" name="enviar" value="Registrarme" />
+			<input type="reset" name="limpiar" value="Reiniciar Formulario" />
+		</div>
+	</form>
+</body>
+</html>
