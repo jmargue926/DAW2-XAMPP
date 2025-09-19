@@ -35,7 +35,6 @@
 		echo "<p>" .$num1 . " elevado a " . $num2 . " es: " . $pow . "</p>"; 
 		*/
 		
-
 		// V2, con tabla
 		echo "<table>";
 		echo "<tr><td>La suma de " . $num1 . " y " . $num2 . " es: </td><td>" . ($suma) . "</td></tr>\n";

@@ -45,7 +45,7 @@ header div{
 	margin: 5px;
 }
 
-nav{
+#asideI{
 	grid-area: N;
 	background-color: aquamarine;
 }
@@ -58,7 +58,7 @@ main{
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
 }
-aside{
+#asideD{
 	grid-area: A;
 	background-color: aquamarine;
 }
