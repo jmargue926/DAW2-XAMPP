@@ -5,7 +5,7 @@ body{
 						 "N M A"
 						 "F F F";
 	grid-template-columns: 1fr 4fr 1fr;
-	grid-template-rows: 10vh fit-content 10vh;
+	grid-template-rows: repeat(3, fit-content);
 }
 
 body > * {
@@ -20,26 +20,25 @@ header{
 	flex-direction: row;
 	justify-content: space-between;
 	background-color: beige;
-	
 }
 
-header div{
+header > div{
 	justify-content: center;
 	align-content: center;
 }
 
-.foto img{
-	height: auto;
-	max-width: 100%;
+.fotoHeader img{
 	margin: 5px;
+	height: 100px;
+	width: auto;
 }
 
 #nombre{
-	width: 80%;
+	width: 90%;
 }
 
 #logos{
-	width: 25%;
+	width: fit-content;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -61,7 +60,6 @@ main{
 
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-
 	justify-content: center;
 	align-items: center;
 }
@@ -72,8 +70,6 @@ main{
 	width: 90%;
 	border-radius: 15px;
 }
-
-
 
 #asideD{
 	grid-area: A;
@@ -86,10 +82,50 @@ footer{
 	background-color: aliceblue;
 }
 
-*{border: 1px solid;} 
 
-/* @media screen and (width < 600px){
-	#segunda{
+/* Media queris para pantallas pequeñas */
+@media screen and (width < 1000px){
+	#asideD{
 		display: none;
 	}
-} */
+	body{
+		text-align: center;
+		display:  grid;
+		grid-template-areas:"H H"
+							"N M"
+							"F F";
+		grid-template-columns: 1fr 3fr;
+	}
+}
+
+@media screen and (width < 850px){
+	.fotoHeader img{
+		height: 60px;
+	}
+
+	#logos img{
+		width: 25px;
+		height: 25px;
+	}
+
+	main{
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (width < 700px){
+	body{
+		grid-template-areas:"H" "N" "M" "F";
+		grid-template-columns: 1fr;
+	}
+
+	#logos{
+		display: none;
+	}
+	#fotoHeader2{
+		display: none;
+	}
+	
+}
+
+/* *{border: 1px solid;}  */
